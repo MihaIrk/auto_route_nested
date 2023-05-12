@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 
 import 'main_router.gr.dart';
@@ -6,30 +5,37 @@ import 'main_router.gr.dart';
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
 class MainRoute extends $MainRoute {
   @override
+  RouteType get defaultRouteType =>
+      const CustomRouteType(
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 100,
+    reverseDurationInMilliseconds: 100,
+  );
+  @override
   List<AutoRoute> get routes => [
     AutoRoute(
       page: MyHomeRoute.page,
+      path: '/',
       initial: true,
       children: [
         AutoRoute(
-          page: FirstRouteRoute.page,
-          path: 'firstRoute',
+          page: ProductRoute.page,
+          path: 'productRoute',
           children: [
-            AutoRoute(page: HomeTabViewRoute.page,
+            AutoRoute(page: ProductTabViewRoute.page,
             ),
             AutoRoute(page: ProductViewRoute.page,)
           ],
         ),
         AutoRoute(
-          page: SecondRouteRoute.page,
-          path: 'secondRoute',
+          page: UserRoute.page,
+          path: 'userRoute',
           children: [
             AutoRoute(
               page: UserTabViewRoute.page,
             ),
             AutoRoute(
               page: UserInfoViewRoute.page,
-              path: 'secondRoute/userInfo'
             ),
           ],
         ),
@@ -40,11 +46,11 @@ class MainRoute extends $MainRoute {
 
 
 @RoutePage()
-class FirstRouteScreen extends AutoRouter {
-  const FirstRouteScreen({Key? key}):super(key: key);
+class ProductScreen extends AutoRouter {
+  const ProductScreen({super.key});
 }
 
 @RoutePage()
-class SecondRouteScreen extends AutoRouter {
-  const SecondRouteScreen({Key? key}):super(key: key);
+class UserScreen extends AutoRouter {
+  const UserScreen({super.key});
 }

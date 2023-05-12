@@ -27,22 +27,22 @@ abstract class $MainRoute extends _i7.RootStackRouter {
         child: const _i1.MyHomeScreen(),
       );
     },
-    FirstRouteRoute.name: (routeData) {
+    ProductRoute.name: (routeData) {
       return _i7.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.FirstRouteScreen(),
+        child: const _i2.ProductScreen(),
       );
     },
-    SecondRouteRoute.name: (routeData) {
+    UserRoute.name: (routeData) {
       return _i7.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.SecondRouteScreen(),
+        child: const _i2.UserScreen(),
       );
     },
-    HomeTabViewRoute.name: (routeData) {
+    ProductTabViewRoute.name: (routeData) {
       return _i7.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.HomeTabViewScreen(),
+        child: const _i3.ProductTabViewScreen(),
       );
     },
     UserTabViewRoute.name: (routeData) {
@@ -81,43 +81,43 @@ class MyHomeRoute extends _i7.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.FirstRouteScreen]
-class FirstRouteRoute extends _i7.PageRouteInfo<void> {
-  const FirstRouteRoute({List<_i7.PageRouteInfo>? children})
+/// [_i2.ProductScreen]
+class ProductRoute extends _i7.PageRouteInfo<void> {
+  const ProductRoute({List<_i7.PageRouteInfo>? children})
       : super(
-          FirstRouteRoute.name,
+          ProductRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'FirstRouteRoute';
+  static const String name = 'ProductRoute';
 
   static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.SecondRouteScreen]
-class SecondRouteRoute extends _i7.PageRouteInfo<void> {
-  const SecondRouteRoute({List<_i7.PageRouteInfo>? children})
+/// [_i2.UserScreen]
+class UserRoute extends _i7.PageRouteInfo<void> {
+  const UserRoute({List<_i7.PageRouteInfo>? children})
       : super(
-          SecondRouteRoute.name,
+          UserRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'SecondRouteRoute';
+  static const String name = 'UserRoute';
 
   static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.HomeTabViewScreen]
-class HomeTabViewRoute extends _i7.PageRouteInfo<void> {
-  const HomeTabViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i3.ProductTabViewScreen]
+class ProductTabViewRoute extends _i7.PageRouteInfo<void> {
+  const ProductTabViewRoute({List<_i7.PageRouteInfo>? children})
       : super(
-          HomeTabViewRoute.name,
+          ProductTabViewRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'HomeTabViewRoute';
+  static const String name = 'ProductTabViewRoute';
 
   static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
 }

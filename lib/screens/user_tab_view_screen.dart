@@ -9,9 +9,9 @@ class UserTabViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ElevatedButton(
-        onPressed: (){context.router.push(UserInfoViewRoute());},
-        child: Text('Информация о пользователе'),
+      child: FilledButton(
+        onPressed: (){context.router.push(const UserInfoViewRoute());},
+        child: const Text('Информация о пользователе'),
       ),
     );
   }

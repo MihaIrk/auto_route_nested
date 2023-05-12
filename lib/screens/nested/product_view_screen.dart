@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/annotations.dart';
+import 'package:new_task/routes/main_router.gr.dart';
 
 @RoutePage()
 class ProductViewScreen extends StatelessWidget {
@@ -9,11 +9,21 @@ class ProductViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Product'),),
+      appBar: AppBar(
+        title: Text('Product'),
+      ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: (){},
-          child: Text('Перейти в информацию о пользователе'),
+        child: FilledButton(
+          onPressed: (){
+            context.navigateTo(const UserRoute(
+              children: [
+                UserTabViewRoute(),
+                UserInfoViewRoute(),
+              ]
+            ),
+            );
+          },
+          child: const Text('Перейти в информацию о пользователе'),
         ),
       ),
     );

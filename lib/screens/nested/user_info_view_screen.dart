@@ -10,10 +10,10 @@ class UserInfoViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User'),
+        title: const Text('User'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Divider(height: 0.1, thickness: 1,color: Colors.black,),
       ),
     );
